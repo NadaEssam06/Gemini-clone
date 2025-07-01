@@ -1,5 +1,3 @@
-//"AIzaSyBCr92w6GtYKrTzd2_UnzUst5ez9fU_KHU";
-
 const chatHistoryDiv = document.getElementById("chatHistory");
 const userInput = document.getElementById("userInput");
 const sendButton = document.getElementById("sendButton");
