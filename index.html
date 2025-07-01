@@ -26,6 +26,11 @@
       </div>
       <div id="loadingIndicator" class="loading-indicator">Thinking..</div>
       <div class="input-area">
+        <div id="filePreviewContainer" class="file-preview-container hidden">
+          <span id="fileNameDisplay" class="file-name"></span>
+          <span id="fileSizeDisplay" class="file-size"></span>
+          <button id="clearFileButton" class="clear-file-button">X</button>
+        </div>
         <div id="imagePreviewContainer" class="image-preview-container">
           <img
             id="imagePreview"
@@ -39,6 +44,9 @@
         </div>
 
         <div class="input-row">
+          <label for="fileUpload" class="file-upload-label">
+            📎 <input type="file" id="fileUpload" class="hidden-file-input" />
+          </label>
           <label for="imageUpload" class="image-upload-label">
             📸
             <input

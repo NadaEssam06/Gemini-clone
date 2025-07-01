@@ -259,3 +259,105 @@ body {
     padding: 8px 15px;
   }
 }
+/* File Upload Specific Styles */
+.file-upload-label {
+  font-size: 1.8em; /* Adjust icon size */
+  cursor: pointer;
+  color: #4a90e2; /* Same color as image upload */
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.file-upload-label:hover {
+  background-color: #e2f0ff; /* Same hover as image upload */
+}
+
+.file-preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To push button to the right */
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: #fefefe;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out,
+    border 0.3s ease-out;
+  opacity: 0;
+}
+
+.file-preview-container:not(.hidden) {
+  max-height: 50px; /* Adjust based on desired preview size */
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  opacity: 1;
+}
+
+.file-name {
+  font-size: 0.9em;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 40px); /* Account for clear button width */
+}
+
+.file-size-display {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 5px;
+}
+
+.clear-file-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  margin-left: 10px; /* Space from file name */
+}
+
+.clear-file-button:hover {
+  opacity: 1;
+}
+
+.clear-file-button.hidden {
+  display: none; /* Keep hidden using JS */
+}
+
+/* For displaying file info within the chat bubble */
+.chat-file {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat-file .file-size-display {
+  font-size: 0.75em;
+  color: #888;
+}
+
+.hidden {
+  display: none;
+}
