@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gemini API Chat App</title>
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link
       rel="stylesheet"
@@ -26,12 +26,35 @@
       </div>
       <div id="loadingIndicator" class="loading-indicator">Thinking..</div>
       <div class="input-area">
-        <textarea
-          id="userInput"
-          placeholder="Type your message..."
-          rows="1"
-        ></textarea>
-        <button id="sendButton">Send</button>
+        <div id="imagePreviewContainer" class="image-preview-container">
+          <img
+            id="imagePreview"
+            class="image-preview"
+            src="#"
+            alt="Image Preview"
+          />
+          <button id="clearImageButton" class="clear-image-button hidden">
+            X
+          </button>
+        </div>
+
+        <div class="input-row">
+          <label for="imageUpload" class="image-upload-label">
+            📸
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              class="hidden-file-input"
+            />
+          </label>
+          <textarea
+            id="userInput"
+            placeholder="Type your message..."
+            rows="1"
+          ></textarea>
+          <button id="sendButton">Send</button>
+        </div>
         <button id="newChatButton" class="new-chat-button">New Chat</button>
       </div>
     </div>
